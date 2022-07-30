@@ -35,8 +35,9 @@ jobs:
       uses: gradle/gradle-build-action@67421db6bd0bf253fb4bd25b31ebb98943c375e1
       with:
         arguments: build jar
+    - name: Get gradle version action
+      uses: thecodemonkey/action-get-gradle-version@v1.0
     - name: Upload a Build Artifact
       uses: actions/upload-artifact@v3.1.0
       with:
-        name: lame_0.0.1.jar
         path: ./build/libs/*
